@@ -65,6 +65,3 @@ Thumbs.db
 # Sphinx documentation
 docs/_build/
 
-# Static
-reboot/static/
-

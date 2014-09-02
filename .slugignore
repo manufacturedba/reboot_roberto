@@ -5,3 +5,4 @@ static
 local.py
 local.pyc
 node_modules
+reboot/static
