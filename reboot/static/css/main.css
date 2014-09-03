@@ -1,9 +1,32 @@
 @charset "UTF-8";
+/* |-o-| tie-fighter indicates sticky footer solution. do not touch. */
+.font-primary { font-family: "Raleway", sans-serif; }
+
+.font-inverted { color: #FFF; }
+
+.link-hover-ink:hover { text-decoration: none; color: #333; }
+
 @font-face { font-family: "Raleway"; font-style: normal; font-weight: 100; src: local("☺︎"), url("../fonts/Raleway/Raleway-Regular.ttf") format("truetype"); }
 
-#navigation { font-family: "Raleway", sans-serif; color: #FFF; background: #cf3b2d; }
+html { position: relative; min-height: 100%; }
+
+body { margin: 0 0 50px 0; }
+
+#navigation { background: #cf3b2d; }
 #navigation .container { margin-top: 10px; margin-bottom: 10px; }
 
 #profile_picture { height: 100px; width: 100px; border-radius: 50%; }
 
 #profile_header { margin-bottom: 0px; display: inline-block; #profile_header_sub-margin-top: 0px; }
+
+#profile_header_sub { margin-left: -2px; }
+
+#content { height: 100%; margin-bottom: -50px; }
+
+#footer { width: 100%; background: #cf3b2d; position: absolute; height: 50px; left: 0; bottom: 0; }
+
+#profile_footer { margin-top: 5px; }
+
+#profile_footer_main { margin: 0; }
+
+#profile_footer_sub { padding-left: 2px; margin: 0 5px 0 0; }

@@ -1,3 +1,10 @@
+/*
+ *    |-o-| tie-fighter indicates sticky footer solution. do not touch.
+ */
+
+// Imports
+@import 'utility';
+
 // Font
 @font-face {
     font-family: "Raleway";
@@ -17,9 +24,16 @@ $watermelon: rgb(31,20,20);
 $lead: rgb(207,59,45);
 $ink: #333;
 
+html {
+    position: relative; // |-o-| pew pew
+    min-height: 100%; // |-o-| pew pew
+}
+
+body {
+    margin: 0 0 50px 0; // |-o-| pew pew
+}
+
 #navigation {
-    font-family: "Raleway", sans-serif;
-    color: #FFF;
     background: $lead;
     .container {
         margin-top: 10px;
@@ -39,4 +53,35 @@ $ink: #333;
     #profile_header_sub: {
         margin-top: 0px;
     }
+}
+
+#profile_header_sub {
+    margin-left: -2px;
+}
+
+#content {
+    height: 100%;
+    margin-bottom: -50px;
+}
+
+#footer {
+    width: 100%;
+    background: $lead;
+    position: absolute; // |-o-| pew pew
+    height: 50px; // |-o-| pew pew
+    left: 0; // |-o-| pew pew
+    bottom: 0; // |-o-| pew pew    
+}
+
+#profile_footer {
+    margin-top: 5px;
+}
+
+#profile_footer_main {
+    margin: 0;
+}
+
+#profile_footer_sub {
+    padding-left: 2px;
+    margin: 0 5px 0 0;
 }

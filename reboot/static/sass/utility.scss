@@ -1,0 +1,14 @@
+.font-primary {
+    font-family: "Raleway", sans-serif;
+}
+
+.font-inverted {
+    color: #FFF;
+}
+
+.link-hover-ink {
+    &:hover { 
+        text-decoration: none;
+        color: #333;
+    }
+}
