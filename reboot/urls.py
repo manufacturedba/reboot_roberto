@@ -11,7 +11,7 @@ admin.autodiscover()
 urlpatterns = patterns("",
     
     # Homepage
-    url(r'^$', generic.TemplateView.as_view(template_name='index.html')),
+    url(r'^$', generic.TemplateView.as_view(template_name='base.html')),
     
     # Comments
     url(r'^comments/', include('django.contrib.comments.urls')),

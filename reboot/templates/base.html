@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 {% load i18n %}
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" data-ng-app="rebootRoberto"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" data-ng-app="rebootRoberto"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" data-ng-app="rebootRoberto"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" data-ng-app="rebootRoberto"> <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         <title>{% block page_title %}{% endblock %}</title>
-        
         <meta name="description" content="{% block meta_description %}{% endblock %}" />
         <meta name="author" content="{% block meta_author %}{% endblock %}" />
         <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css" />
+        <base href="/">
         {% block css %}{% endblock %}
         
         <script src="{{ STATIC_URL }}vendor/modernizer/js/modernizr-2.6.2.min.js"></script>
@@ -24,16 +24,23 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
         {% include 'partials/navigation.html' %}
-        {% block content %}
-        {% endblock content %}
+        <div data-ng-view>
+        </div>
 
         {% block javascript_library %}
         <script src="{{ STATIC_URL }}js/plugins.js"></script>
         <script src="{{ STATIC_URL }}js/main.js"></script>
         <script src="{{ STATIC_URL }}vendor/angular/js/angular.min.js"></script>
-        {% block angular_library %}
-        {% endblock %}
+        <script src="{{ STATIC_URL }}vendor/angular/js/angular-route.min.js"></script>
+            {% block angular_library %}
+                <script src="{{ STATIC_URL }}js/app.js"></script>
+                <script src="{{ STATIC_URL }}js/controllers/indexCtrl.js"></script>
+                {% block angular_library_templates %}
+                    {% include 'partials/index.html' %}
+                {% endblock %}
+            {% endblock %}
         {% endblock javascript_library %}
+        
         {% block javascript %}
         {% endblock javascript %}
 
