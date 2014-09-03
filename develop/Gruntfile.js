@@ -17,6 +17,12 @@ module.exports = function(grunt){
             options: {
                 livereload: true
             }
+          },
+          html: {
+            files: [base_path + 'templates/**/*.html'],
+            options: {
+                livereload: true
+            }
           }
         },
         sass: {
