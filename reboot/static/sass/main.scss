@@ -1,1 +1,42 @@
-// Hello World!
+// Font
+@font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 100;
+    src: local("☺︎"), url("../fonts/Raleway/Raleway-Regular.ttf") format("truetype");
+    
+}
+
+// Colors
+// Theme by ver
+// http://www.colourlovers.com/palette/1290436/the_old_cars
+$poiperler: rgb(123,181,159);
+$fiftyTwo: rgb(82,57,51);
+$meeting: rgb(219,194,158);
+$watermelon: rgb(31,20,20);
+$lead: rgb(207,59,45);
+$ink: #333;
+
+#navigation {
+    font-family: "Raleway", sans-serif;
+    color: #FFF;
+    background: $lead;
+    .container {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+#profile_picture {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+#profile_header {
+    margin-bottom: 0px;
+    display: inline-block;
+    #profile_header_sub: {
+        margin-top: 0px;
+    }
+}
