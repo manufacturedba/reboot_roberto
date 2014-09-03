@@ -1,4 +1,5 @@
+{% load zinnia_tags %}
+
 <script id="partials/index.html" type="text/ng-template">
-    <h1 data-ng-bind="test"></h1>
-    <input data-ng-model="test" />
+    {% get_recent_entries %}
 </script>
