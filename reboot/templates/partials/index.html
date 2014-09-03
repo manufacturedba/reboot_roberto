@@ -1,5 +1,7 @@
 {% load zinnia_tags %}
 
 <script id="partials/index.html" type="text/ng-template">
-    {% get_recent_entries %}
+    {% for entry in entries %}
+        {{ entry.content }}
+    {% endfor %}
 </script>
