@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@font-face { font-family: "Raleway"; font-style: normal; font-weight: 100; src: local("☺︎"), url("../fonts/Raleway/Raleway-Regular.ttf") format("truetype"); }
+
+#navigation { font-family: "Raleway", sans-serif; color: #FFF; background: #cf3b2d; }
+#navigation .container { margin-top: 10px; margin-bottom: 10px; }
+
+#profile_picture { height: 100px; width: 100px; border-radius: 50%; }
+
+#profile_header { margin-bottom: 0px; display: inline-block; #profile_header_sub-margin-top: 0px; }

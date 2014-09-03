@@ -11,8 +11,9 @@
         <meta name="description" content="{% block meta_description %}{% endblock %}" />
         <meta name="author" content="{% block meta_author %}{% endblock %}" />
         <meta name="viewport" content="width=device-width" />
-        <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css" />
         <base href="/">
+        <link rel="stylesheet" href="{{ STATIC_URL }}vendor/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css" />
         {% block css %}{% endblock %}
         
         <script src="{{ STATIC_URL }}vendor/modernizer/js/modernizr-2.6.2.min.js"></script>
@@ -24,7 +25,7 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
         {% include 'partials/navigation.html' %}
-        <div data-ng-view>
+        <div class="container" data-ng-view>
         </div>
 
         {% block javascript_library %}
