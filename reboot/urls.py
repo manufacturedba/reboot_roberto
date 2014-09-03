@@ -5,13 +5,18 @@ from django.views import generic
 from django.conf import settings
 from django.conf.urls.static import static
 
+from views.index import HomeView, entries
+
 admin.autodiscover()
 
 
 urlpatterns = patterns("",
     
     # Homepage
-    url(r'^$', generic.TemplateView.as_view(template_name='base.html')),
+    url(r'^$', HomeView.as_view()),
+    
+    # Entries
+    url(r'^entries/$', entries),
     
     # Comments
     url(r'^comments/', include('django.contrib.comments.urls')),
