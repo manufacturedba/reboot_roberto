@@ -2,4 +2,8 @@
 
 .font-inverted { color: #FFF; }
 
+.font-small { font-size: 0.5em; }
+
+.font-micro { font-size: 0.25em; }
+
 .link-hover-ink:hover { text-decoration: none; color: #333; }

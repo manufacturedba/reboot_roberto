@@ -4,9 +4,15 @@
 
 .font-inverted { color: #FFF; }
 
+.font-small { font-size: 0.5em; }
+
+.font-micro { font-size: 0.25em; }
+
 .link-hover-ink:hover { text-decoration: none; color: #333; }
 
 @font-face { font-family: "Raleway"; font-style: normal; font-weight: 100; src: local("☺︎"), url("../fonts/Raleway/Raleway-Regular.ttf") format("truetype"); }
+
+hr { height: 1px; }
 
 html { position: relative; min-height: 100%; }
 

@@ -24,6 +24,11 @@ $watermelon: rgb(31,20,20);
 $lead: rgb(207,59,45);
 $ink: #333;
 
+// Never a time when you want a shit hr
+hr {
+    height: 1px;
+}
+
 html {
     position: relative; // |-o-| pew pew
     min-height: 100%; // |-o-| pew pew

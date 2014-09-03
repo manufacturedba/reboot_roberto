@@ -37,6 +37,7 @@
             {% block angular_library %}
                 <script src="{{ STATIC_URL }}js/app.js"></script>
                 <script src="{{ STATIC_URL }}js/controllers/indexCtrl.js"></script>
+                <script src="{{ STATIC_URL }}js/services/blogSrvc.js"></script>
                 {% block angular_library_templates %}
                     {% include 'partials/index.html' %}
                 {% endblock %}

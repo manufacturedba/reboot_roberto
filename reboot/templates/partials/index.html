@@ -1,7 +1,15 @@
 {% load zinnia_tags %}
 
 <script id="partials/index.html" type="text/ng-template">
-    {% for entry in entries %}
-        {{ entry.content }}
-    {% endfor %}
+    {% verbatim %}
+        <div data-ng-repeat="entry in entries">
+            <h2>{{ entry.title }} 
+                <span class="font-small">
+                    written on {{ entry.creation_date | date: 'short' }}
+                </span>
+            </h2>
+            <div ng-bind-html="trustAsHtml(entry.content)"></div>
+            <hr />
+        </div>
+    {% endverbatim %}
 </script>
