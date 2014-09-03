@@ -1,9 +1,19 @@
+@import 'colors';
+
 .font-primary {
     font-family: "Raleway", sans-serif;
 }
 
-.font-inverted {
+.font-color-inverted {
     color: #FFF;
+}
+
+.font-color-ink {
+    color: $ink;
+}
+
+.font-color-wrench {
+    color: $wrench;
 }
 
 .font-small {
@@ -17,6 +27,6 @@
 .link-hover-ink {
     &:hover { 
         text-decoration: none;
-        color: #333;
+        color: $ink;
     }
 }

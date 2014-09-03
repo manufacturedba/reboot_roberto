@@ -2,9 +2,6 @@
  *    |-o-| tie-fighter indicates sticky footer solution. do not touch.
  */
 
-// Imports
-@import 'utility';
-
 // Font
 @font-face {
     font-family: "Raleway";
@@ -14,15 +11,10 @@
     
 }
 
-// Colors
-// Theme by ver
-// http://www.colourlovers.com/palette/1290436/the_old_cars
-$poiperler: rgb(123,181,159);
-$fiftyTwo: rgb(82,57,51);
-$meeting: rgb(219,194,158);
-$watermelon: rgb(31,20,20);
-$lead: rgb(207,59,45);
-$ink: #333;
+
+// Imports
+@import 'colors';
+@import 'utility';
 
 // Never a time when you want a shit hr
 hr {
@@ -35,7 +27,7 @@ html {
 }
 
 body {
-    margin: 0 0 50px 0; // |-o-| pew pew
+    margin: 0 0 50px // |-o-| pew pew
 }
 
 #navigation {
@@ -65,13 +57,10 @@ body {
 }
 
 #content {
-    height: 100%;
-    margin-bottom: -50px;
 }
 
 #footer {
     width: 100%;
-    background: $lead;
     position: absolute; // |-o-| pew pew
     height: 50px; // |-o-| pew pew
     left: 0; // |-o-| pew pew

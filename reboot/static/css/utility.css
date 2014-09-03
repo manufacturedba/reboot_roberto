@@ -1,9 +1,13 @@
 .font-primary { font-family: "Raleway", sans-serif; }
 
-.font-inverted { color: #FFF; }
+.font-color-inverted { color: #FFF; }
+
+.font-color-ink { color: #333333; }
+
+.font-color-wrench { color: #4b5b6e; }
 
 .font-small { font-size: 0.5em; }
 
 .font-micro { font-size: 0.25em; }
 
-.link-hover-ink:hover { text-decoration: none; color: #333; }
+.link-hover-ink:hover { text-decoration: none; color: #333333; }
