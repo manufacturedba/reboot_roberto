@@ -20,7 +20,7 @@
         <script src="{{ STATIC_URL }}vendor/modernizer/js/modernizr-2.6.2.min.js"></script>
     </head>
 
-    <body class="{% block body_class %}{% endblock %}">
+    <body class="{% block body_class %}{% endblock %}" data-ng-controller="utilityCtrl as utility">
     {% block body %}
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
@@ -32,14 +32,18 @@
         {% block javascript_library %}
         <script src="{{ STATIC_URL }}js/plugins.js"></script>
         <script src="{{ STATIC_URL }}js/main.js"></script>
+        <script src="{{ STATIC_URL }}vendor/underscore/js/underscore-min.js"></script>
         <script src="{{ STATIC_URL }}vendor/angular/js/angular.min.js"></script>
         <script src="{{ STATIC_URL }}vendor/angular/js/angular-route.min.js"></script>
             {% block angular_library %}
                 <script src="{{ STATIC_URL }}js/app.js"></script>
+                <script src="{{ STATIC_URL }}js/controllers/utilityCtrl.js"></script>
                 <script src="{{ STATIC_URL }}js/controllers/indexCtrl.js"></script>
+                <script src="{{ STATIC_URL }}js/controllers/entryCtrl.js"></script>
                 <script src="{{ STATIC_URL }}js/services/blogSrvc.js"></script>
                 {% block angular_library_templates %}
                     {% include 'partials/index.html' %}
+                    {% include 'partials/entry.html' %}
                 {% endblock %}
             {% endblock %}
         {% endblock javascript_library %}

@@ -1,8 +1,7 @@
 {% load zinnia_tags %}
 
-<script id="partials/index.html" type="text/ng-template">
+<script type="text/ng-template" id="partials/entry.html">
     {% verbatim %}
-        <div data-ng-repeat="entry in blog.entries">
             <h2>
                 <a data-ng-href="entry/{{ entry.slug }}">
                     {{ entry.title }}
@@ -11,8 +10,7 @@
                     written on {{ entry.creation_date | date: 'short' }}
                 </span>
             </h2>
-            <div ng-bind-html="utility.limitTo(utility.trustAsHtml(entry.content), 100)"></div>
+            <div ng-bind-html="utility.trustAsHtml(entry.content)"></div>
             <hr />
-        </div>
     {% endverbatim %}
 </script>

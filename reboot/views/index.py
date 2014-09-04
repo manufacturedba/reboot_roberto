@@ -23,7 +23,7 @@ def entries(request):
     data = []
     recent_entries = Entry.objects.all()[:5]
     for entry in recent_entries:
-        post = {'title': entry.title, 'content': entry.content, 'comments': [], 'creation_date': entry.creation_date.isoformat()}
+        post = {'title': entry.title, 'content': entry.content, 'comments': [], 'creation_date': entry.creation_date.isoformat(), 'slug': entry.slug}
         for comment in entry.comments:
             comment_obj = {'comment': comment.comment, 'public': comment.is_public, 'user': comment.user_name}
             post['comments'].append(comment_obj)

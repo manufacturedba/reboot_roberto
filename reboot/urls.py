@@ -9,11 +9,8 @@ from views.index import HomeView, entries
 
 admin.autodiscover()
 
-
-urlpatterns = patterns("",
-    
-    # Homepage
-    url(r'^$', HomeView.as_view()),
+urlpatterns = static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += patterns("",
     
     # Entries
     url(r'^entries/$', entries),
@@ -27,7 +24,9 @@ urlpatterns = patterns("",
     # There's no favicon here!
     url(r"^favicon.ico$", generic.RedirectView.as_view()),
     
-    # Blog
-    url(r'^blog/', include('zinnia.urls')),
+    # Homepage
+    url(r'^$', HomeView.as_view()),
     
-) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # Entry page
+    url(r'^entry/', HomeView.as_view()),
+)
