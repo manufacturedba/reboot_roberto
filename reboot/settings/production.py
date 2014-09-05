@@ -12,9 +12,6 @@ import os
 import dj_database_url
 from django.utils.crypto import get_random_string
 
-DEBUG = True
-
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
 SITE_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -31,9 +28,9 @@ HEROKU_BUILDPACK_URL = "https://github.com/heroku/heroku-buildpack-python.git"
 
 # The name and domain of this site.
 
-SITE_NAME = "Example"
+SITE_NAME = "Reboot Roberto"
 
-SITE_DOMAIN = "reboot.herokuapp.com"
+SITE_DOMAIN = "rebootroberto.comcom"
 
 PREPEND_WWW = False
 
