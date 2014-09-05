@@ -30,7 +30,7 @@ HEROKU_BUILDPACK_URL = "https://github.com/heroku/heroku-buildpack-python.git"
 
 SITE_NAME = "Reboot Roberto"
 
-SITE_DOMAIN = "rebootroberto.comcom"
+SITE_DOMAIN = "rebootroberto.com"
 
 PREPEND_WWW = False
 
