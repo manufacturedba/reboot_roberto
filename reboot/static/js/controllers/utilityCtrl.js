@@ -10,9 +10,7 @@ mod.controller('utilityCtrl', ['$sce', '$filter', function(sce, filter){
     }
     
     this.limitTo = function(input, limit){
-        var filtered = filter('limitTo')(input, limit);
-        console.log(filtered) 
-        return filtered;
+        return filter('limitTo')(input, limit);
     };
     
 }]);
