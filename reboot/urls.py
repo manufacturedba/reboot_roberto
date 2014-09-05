@@ -15,6 +15,8 @@ urlpatterns += patterns("",
     # Entries
     url(r'^entries/$', entries),
     
+    url(r'^blog/', include('zinnia.urls')),
+    
     # Comments
     url(r'^comments/', include('django.contrib.comments.urls')),
     
