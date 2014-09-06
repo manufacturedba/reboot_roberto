@@ -5,10 +5,11 @@ from zinnia.models.entry import Entry
 
 from django.views.generic.base import TemplateView
 from django.http import HttpResponse
+from django.http import Http404
+
+from posixpath import basename
 
 import json
-
-import sys
 
 class JsonResponse(HttpResponse):
     def __init__(self, content={}, mimetype=None, status=None,
@@ -18,6 +19,19 @@ class JsonResponse(HttpResponse):
                                            
 class HomeView(TemplateView):
     template_name = "base.html"
+
+class EntryView(HomeView):
+    
+    def get_context_data(self, **kwargs):
+        context = super(EntryView, self).get_context_data(**kwargs)
+        try:
+            post = Entry.objects.filter(slug=basename(self.request.path))[0]
+        except Entry.DoesNotExist:
+            raise Http404
+        context['meta'] = post
+        # Overwrite improper date format
+        context['meta'].creation_date = post.creation_date.isoformat()
+        return context
         
 def entries(request):
     data = []
@@ -29,3 +43,4 @@ def entries(request):
             post['comments'].append(comment_obj)
         data.append(post)
     return JsonResponse(data)
+
