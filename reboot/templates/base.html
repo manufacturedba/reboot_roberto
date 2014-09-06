@@ -12,13 +12,11 @@
         <meta name="author" content="{% block meta_author %}{% endblock %}" />
         <meta name="viewport" content="width=device-width" />
         {% block meta %}
-        {% verbatim %}
             <meta property="og:title" content="{{ meta.title }}" />
             <meta property="og:type" content="article" />
             <meta property="og:url" content="//rebootroberto.com/entries/{{ meta.slug }}" />
             <meta property="og:image" content="//rebootroberto.com/static/img/roberto.jpeg" />
             <meta property="article:published_time" content="{{ meta.creation_date }}" />
-        {% endverbatim %}
         {% endblock %}
         <base href="/">
         <link rel="stylesheet" href="{{ STATIC_URL }}vendor/bootstrap/css/bootstrap.min.css" />

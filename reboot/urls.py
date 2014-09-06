@@ -5,7 +5,7 @@ from django.views import generic
 from django.conf import settings
 from django.conf.urls.static import static
 
-from views.index import HomeView, entries
+from views.index import HomeView, EntryView, entries
 
 admin.autodiscover()
 
@@ -23,9 +23,9 @@ urlpatterns += patterns("",
     # Admin URLs.
     url(r"^admin/", include(admin.site.urls)),
     
+    # Entry page
+    url(r'^entry/', EntryView.as_view()),
+    
     # Homepage
     url(r'^$', HomeView.as_view()),
-    
-    # Entry page
-    url(r'^entry/', HomeView.as_view()),
 )
