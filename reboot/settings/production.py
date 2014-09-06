@@ -31,7 +31,7 @@ HEROKU_BUILDPACK_URL = "https://github.com/heroku/heroku-buildpack-python.git"
 SITE_NAME = "Reboot Roberto"
 
 SITE_DOMAIN = "rebootroberto.com"
-
+ALT_DOMAINS = ("www.rebootroberto.com",)
 PREPEND_WWW = False
 
 
@@ -44,7 +44,7 @@ ALLOWED_HOSTS = (
     "{HEROKU_APP_NAME}.herokuapp.com".format(
         HEROKU_APP_NAME = HEROKU_APP_NAME,
     ),
-)
+) + ALT_DOMAINS
 
 
 # Database settings.
