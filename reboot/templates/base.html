@@ -14,8 +14,9 @@
         {% block meta %}
             <meta property="og:title" content="{{ meta.title }}" />
             <meta property="og:type" content="article" />
-            <meta property="og:url" content="http://rebootroberto.com/entries/{{ meta.slug }}" />
-            <meta property="og:image" content="http://rebootroberto.com/static/img/roberto.jpeg" />
+            <meta property="og:url" content="http://rebootroberto.com/entry/{{ meta.slug }}" />
+            <meta property="og:image" content="https://rebootroberto.s3.amazonaws.com/img/roberto.jpeg" />
+            <meta property="og:description" content="Thoughts on my Journey Through Leukemia" />
             <meta property="article:published_time" content="{{ meta.creation_date }}" />
         {% endblock %}
         <base href="/">
