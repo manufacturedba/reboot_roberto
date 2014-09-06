@@ -2,7 +2,7 @@
 
 var mod = angular.module('rebootRoberto.controllers.entry', ['rebootRoberto.services.blog']);
 
-mod.controller('entryCtrl', ['$scope', '$routeParams', '$log', 'blogSrvc', function(scope, routeParams, log, blog){
+mod.controller('entryCtrl', ['$rootScope', '$scope', '$routeParams', '$log', 'blogSrvc', function(rootScope, scope, routeParams, log, blog){
     scope.blog = blog;
     scope.entry;
     
@@ -21,6 +21,7 @@ mod.controller('entryCtrl', ['$scope', '$routeParams', '$log', 'blogSrvc', funct
             if(scope.blog.entries){
                 log.debug('Entries loaded');
                 findEntry();
+                rootScope.meta = scope.entry;
                 deregister();
             }
         });
