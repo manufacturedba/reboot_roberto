@@ -30,3 +30,11 @@
         color: $ink;
     }
 }
+
+.link-no-style {
+    &:hover {
+        color: #FFF;
+        text-decoration: none;
+    }
+    color: inherit;
+}

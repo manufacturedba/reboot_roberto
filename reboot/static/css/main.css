@@ -16,6 +16,9 @@
 
 .link-hover-ink:hover { text-decoration: none; color: #333333; }
 
+.link-no-style { color: inherit; }
+.link-no-style:hover { color: #FFF; text-decoration: none; }
+
 hr { height: 1px; }
 
 html { position: relative; min-height: 100%; }
