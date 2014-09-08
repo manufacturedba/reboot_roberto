@@ -2,7 +2,7 @@
 
 var mod = angular.module('rebootRoberto.controllers.utility', []);
 
-mod.controller('utilityCtrl', ['$sce', '$filter', function(sce, filter){
+mod.controller('utilityCtrl', ['$scope', '$sce', '$filter', '$window', '$location', function(scope, sce, filter, $window, location){
     
     // Trust any HTML passed thru
     this.trustAsHtml = function(html){
@@ -12,5 +12,9 @@ mod.controller('utilityCtrl', ['$sce', '$filter', function(sce, filter){
     this.limitTo = function(input, limit){
         return filter('limitTo')(input, limit);
     };
+    
+    scope.$on('$viewContentLoaded', function(event){
+        $window.ga('send', 'pageview', {page : location.path() });
+    });
     
 }]);
