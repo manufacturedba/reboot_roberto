@@ -14,6 +14,10 @@
 
 .font-color-wrench {
     color: $wrench;
+    &:disabled, &:hover:disabled {
+        color: graytext;
+    }
+    
 }
 
 .font-small {
@@ -37,4 +41,9 @@
         text-decoration: none;
     }
     color: inherit;
+}
+
+.btn-no-style {
+    background: inherit;
+    border: none;
 }

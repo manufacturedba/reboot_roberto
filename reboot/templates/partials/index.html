@@ -2,7 +2,7 @@
 
 <script id="partials/index.html" type="text/ng-template">
     {% verbatim %}
-        <div data-ng-repeat="entry in blog.entries">
+        <div data-ng-repeat="entry in blog.entries | startAt:page*entriesToShow | limitTo:entriesToShow">
             <h2>
                 <a class="font-color-wrench link-hover-ink" data-ng-href="entry/{{ entry.slug }}">
                     {{ entry.title }}
@@ -20,5 +20,13 @@
             </center>
             <hr />
         </div>
+        <center>
+            <button class="btn-no-style font-color-wrench link-hover-ink pull-left" data-ng-disabled="page == 0" data-ng-click="page = page - 1">
+                <i class="fa fa-arrow-left fa-3x"></i>
+            </button>
+            <button class="btn-no-style font-color-wrench link-hover-ink pull-right" data-ng-disabled="page == numberOfPages() - 1" data-ng-click="page = page + 1">
+                <i class="fa fa-arrow-right fa-3x"></i>
+            </button>
+        </center>
     {% endverbatim %}
 </script>
