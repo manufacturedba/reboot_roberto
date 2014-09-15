@@ -5,6 +5,7 @@
 .font-color-ink { color: #333333; }
 
 .font-color-wrench { color: #4b5b6e; }
+.font-color-wrench:disabled, .font-color-wrench:hover:disabled { color: graytext; }
 
 .font-small { font-size: 0.5em; }
 
@@ -14,3 +15,5 @@
 
 .link-no-style { color: inherit; }
 .link-no-style:hover { color: #FFF; text-decoration: none; }
+
+.btn-no-style { background: inherit; border: none; }

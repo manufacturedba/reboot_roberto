@@ -35,7 +35,7 @@ class EntryView(HomeView):
         
 def entries(request):
     data = []
-    recent_entries = Entry.objects.all()[:5]
+    recent_entries = Entry.objects.all()
     for entry in recent_entries:
         post = {'title': entry.title, 'content': entry.content, 'comments': [], 'creation_date': entry.creation_date.isoformat(), 'slug': entry.slug}
         for comment in entry.comments:
