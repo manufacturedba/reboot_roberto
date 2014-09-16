@@ -11,7 +11,8 @@
                         written on {{ entry.creation_date | date: 'short' }}
                     </span>
                 </h2>
-                <div ng-bind-html="utility.trustAsHtml(entry.content)"></div>
+                <div class="entry" ng-bind-html="utility.trustAsHtml(entry.content)"></div>
+                <div disqus="entry.slug"></div>
                 <hr />
             </div>
     {% endverbatim %}
