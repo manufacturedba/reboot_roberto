@@ -11,9 +11,9 @@
                     written on {{ entry.creation_date | date: 'short' }}
                 </span>
             </h2>
-            <div ng-bind-html="utility.trustAsHtml(utility.limitTo(entry.content, 725))">
+            <div ng-bind-html="utility.trustAsHtml(utility.limitTo(entry.content, 525))">
             </div>
-            <center data-ng-show="entry.content.length > 725">
+            <center data-ng-show="entry.content.length > 525">
                 <a class="font-color-wrench link-hover-ink" data-ng-href="entry/{{ entry.slug }}">
                 <i class="icon-ellipsis-horizontal icon-3x"></i>
                 </a>
@@ -21,10 +21,10 @@
             <hr />
         </div>
         <center>
-            <button class="btn-no-style font-color-wrench link-hover-ink pull-left" data-ng-disabled="page == 0" data-ng-click="page = page - 1">
+            <button class="btn-no-style font-color-wrench link-hover-ink pull-left" data-ng-disabled="page == 0" data-ng-click="prev()">
                 <i class="icon-arrow-left icon-3x"></i>
             </button>
-            <button class="btn-no-style font-color-wrench link-hover-ink pull-right" data-ng-disabled="page == numberOfPages() - 1" data-ng-click="page = page + 1">
+            <button class="btn-no-style font-color-wrench link-hover-ink pull-right" data-ng-disabled="page == numberOfPages() - 1" data-ng-click="next()">
                 <i class="icon-arrow-right icon-3x"></i>
             </button>
         </center>

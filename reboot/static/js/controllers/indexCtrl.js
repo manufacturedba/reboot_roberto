@@ -2,7 +2,7 @@
 
 var mod = angular.module('rebootRoberto.controllers.index', ['rebootRoberto.services.blog']);
 
-mod.controller('indexCtrl', ['$scope', 'blogSrvc', function(scope, blog){
+mod.controller('indexCtrl', ['$scope', '$window', 'blogSrvc', function(scope, $window, blog){
     scope.blog = blog;
     scope.page = 0;
     scope.entriesToShow = 5;
@@ -18,6 +18,16 @@ mod.controller('indexCtrl', ['$scope', 'blogSrvc', function(scope, blog){
     scope.init = function(){
         // Noop
     };
+    
+    scope.next = function(){
+        scope.page += 1;
+        $window.scrollTo(0,0);
+    }
+    
+    scope.prev = function(){
+        scope.page -= 1;
+        $window.scrollTo(0,0);
+    }
     
     // Init
     scope.init();
